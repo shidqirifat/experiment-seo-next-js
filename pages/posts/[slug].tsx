@@ -20,7 +20,7 @@ export async function getStaticProps({ params }: StatisProps) {
   const post = await getPostBySlug(params.slug)
   const resLogo = await getLogo()
 
-  const domain = process.env.NEXT_PUBLIC_DEPLOYMENT_DOMAIN
+  const domain = process.env.NEXT_PUBLIC_AREA_DOMAIN
   return {
     props: {
       post,
