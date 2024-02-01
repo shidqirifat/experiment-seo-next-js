@@ -32,9 +32,12 @@ export async function getStaticProps({ params }: StatisProps) {
 }
 
 export default function Page({ post, url, logo }: PostProps) {
+  const image =
+    'https://www.jktgadget.com/wp-content/uploads/2023/08/2.-Rekomendasi-4-Laptop-Terbaik-untuk-Desain-Arsitektur.jpg'
+
   return (
     <>
-      <Meta title={post.title} image={post.thumbnail || logo} url={url} />
+      <Meta title={post.title} image={image || logo} url={url} />
       <div className="space-y-5">{post.title}</div>
       <img src={post.thumbnail} alt={post.title} width={600} height={400} />
     </>
